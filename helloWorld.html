@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue.js测试 - 代码之美专栏</title>
+    <!-- author:昌维 代码之美 https://zhuanlan.zhihu.com/codes -->
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <input type="text" name="" value=""
+           placeholder="在这里输入文字，啥变化啊啊啊啊而发啊下面会跟着变化" v-model="message">
+    <hr>
+    <p>{{ message }}</p>
+</div>
+<script type="text/javascript">
+    var app = new Vue({
+        el: '#app',
+        data: {
+            message: 'Hello Vue!'
+        }
+    })
+</script>
+</body>
+</html>
+---------------------
+作者：晴天Smile
+来源：CSDN
+原文：https://blog.csdn.net/liang377122210/article/details/71545459
+版权声明：本文为博主原创文章，转载请附上博文链接！

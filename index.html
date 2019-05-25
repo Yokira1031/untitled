@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        .bs{
+            color: red;
+
+        }
+    </style>
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
+</head>
+<body>
+<div class="bs">
+    hello world!
+    {{msg}}
+    {{count+89}}
+    <div v-html="template">
+
+    </div>
+    <a v-bind:href="url">百度</a>
+</div>
+
+<script>
+    var app = new Vue({
+        el:'.bs',
+        data:{
+            msg:'hello vue!',
+            count:0,
+            template:'<div>输入的div文本</div>',
+            url:'http://www.baidu.com'
+        },
+        watch:{
+            msg:function(newval,oldval) {
+                console.log('newval is:' + newval)
+                console.log('oldval is:' + oldval)
+            }
+
+        }
+
+
+    })
+
+</script>
+
+</body>
+</html>
